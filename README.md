@@ -1,14 +1,15 @@
 
 maxhof905
+
 2021/09/10
 
 
-## Implementing direct and indirect object clitics in European Portuguese
+# Implementing direct and indirect object clitics in European Portuguese
 
 The aim of the program is to help language speakers and learners to implement the correct clitic form in a sentence that
 either only contains a direct or an indirect complement or both at the same time.
 
-# Usage:
+## Usage:
 Type "pyhton3 main.py -h" for getting and overview over the available flags.
 
 The user has the option to:
@@ -35,7 +36,7 @@ functionality is useful when users do either not speak portuguese or want to lea
 If the user provides a sentence that is syntactically to complex for the program, an error will be raised. The user is
  asked to provide a less complex sentence or to switch to the flag -s_sent.
 
-# Grammatical restrictions:
+## Grammatical restrictions:
 The Program works for verbs in the 3 person singular and 3 person plural in indicative present, past and future and also
 in conditional (no composed verb forms, no modal verbs followed by infinitive.) Other grammatical persons will accidentally
 also work due to similar verb endings but are not systematically implemented. The direct and indirect objects can be in
@@ -43,7 +44,7 @@ singular and plural and masculine and feminine. For the program to work correctl
 introduced. Conjunctions, subordinates and negation cannot be parsed correctly. (In portuguese, a negation prior to the
 verb requires the anteposition of the clitic.)
 
-# Background:
+## Background:
 The aim of the program is to help language speakers and learners implement the correct clitic form in a sentence that
 either only contains a direct or an indirect complement or both at the same time. The problem with Portuguese clitics
 is that they are heavily influenced by phonotactic rules, which means that, depending on the syllable structure and the
@@ -52,14 +53,16 @@ clitic system but none seem to have as much variation as Portuguese.
 
 Another factor that makes the implementation of clitics in Portuguese difficult is that Vulgar Latin (the linguistic
 predecessor of modern Romance Languages) future and conditional forms are preserved. In Vulgar Latin the notion of future
-and conditional were expressed as 'FACERE HABEO'/ 'FACERE HABEBAM' (1PSG) evolving to 'fazer hei'/ fazer (hav)ia
-> 'farei'/ 'faria'. This evolution was similar in other romance languages but Portuguese nowadays still opts for
+and conditional were expressed as 'FACERE HABEO'/ 'FACERE HABEBAM' (1PSG) evolving via 'fazer hei'/ fazer (hav)ia
+to 'farei'/ 'faria'. This evolution was similar in other romance languages but Portuguese nowadays still opts for
 mesoclise when it comes to implementing clitic forms in the future tense, which does not occur anymore in any other
 romance language.
-example: python3 main.py -s 'Farei uma celebração' -dobj
-         '--> dobj cliticized: Fá-la-ei' (< FACERE ILLAM HABEO)
 
-# Data:
+> example: python3 main.py -s 'Farei uma celebração' -dobj
+         
+> '--> dobj cliticized: Fá-la-ei' (< FACERE ILLAM HABEO)
+
+## Data:
 For the flag -s_sent the program reads the lines in sample_sentences.txt. This is a file that contains sentences
 that are built with 20 distinct verbs that are among the 40 most common verbs in European Portuguese (according to:
 https://www.corpusdoportugues.org/web-dial/). There are sentences that contain only an indirect, only a direct or both
